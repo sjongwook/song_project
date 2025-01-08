@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css">
-    <title>메인 페이지</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <title>메인 화면</title>
 </head>
 <body>
-    <h1>메인 페이지</h1>
-    <p>이곳은 메인 페이지입니다. 로그인 페이지로 이동하려면 아래 버튼을 클릭하세요.</p>
-    <a href="/login">
-        <button>로그인 페이지로 이동</button>
-    </a>
+    <div class="main-container">
+        <!-- 로고 -->
+        <div class="logo">
+            로고
+        </div>
+
+        <!-- 버튼들 -->
+        <div class="buttons-container">
+            <div class="button-box"></div>
+            <div class="button-box"></div>
+            <div class="button-box"></div>
+            <div class="button-box"></div>
+        </div>
+
+        <!-- 텍스트 섹션 -->
+        <div class="text-section">
+            <h1>오늘의 기분은 어떠신가요?</h1>
+            <p>기분으로 노래를 추천받으세요</p>
+        </div>
+
+        <!-- 입력창 -->
+        <div class="input-container">
+            <input type="text" placeholder="기분을 입력하세요">
+        </div>
+    </div>
 </body>
 </html>
