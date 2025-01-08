@@ -9,49 +9,33 @@ body {
     height: 100vh;
 }
 
-.container {
-    display: flex;
-    background-color: #555555; /* 회색 배경 */
-    width: 800px;
-    height: 500px;
-    border-radius: 15px;
-    overflow: hidden;
+.single-container {
+    background-color: #333333; /* 회색 배경 */
+    padding: 40px;
+    border-radius: 15px; /* 둥근 테두리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 */
+    text-align: center;
+    width: 400px; /* 박스 너비 */
 }
 
-.left-panel {
-    flex: 1;
-    background-color: #808080; /* 더 밝은 회색 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.single-container h1 {
     color: white;
     font-size: 24px;
+    margin-bottom: 20px;
     font-weight: bold;
-    padding: 20px;
-    text-align: center;
-}
-
-.right-panel {
-    flex: 1;
-    background-color: #333333; /* 어두운 회색 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: white;
 }
 
 form {
     width: 100%;
-    max-width: 300px;
+    margin-top: 20px;
 }
 
 form label {
     font-size: 18px;
+    color: white;
     margin-bottom: 5px;
     display: block;
+    text-align: left;
 }
 
 form input {
@@ -93,8 +77,8 @@ form button:hover {
 
 .signup-link {
     font-size: 14px;
-    text-align: center;
-    margin-top: 15px;
+    color: #b0b0b0;
+    margin-top: 10px;
 }
 
 .signup-link a {
