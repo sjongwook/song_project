@@ -37,8 +37,11 @@ def signup(username: str = Form(...), password: str = Form(...), confirm_passwor
     if password != confirm_password:
         return {"error": "비밀번호가 일치하지 않습니다."}
     
+    # 사용자 저장
     users_db[username] = password
-    return {"message": f"회원가입 성공! 아이디: {username}"}
+    
+    # 회원가입 성공 후 메인 페이지로 리다이렉트
+    return RedirectResponse(url="/", status_code=302)
 
 # 로그인 처리
 @app.post("/login")
