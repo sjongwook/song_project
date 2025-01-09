@@ -4,40 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulSync - Sing</title>
-    <link rel="stylesheet" href="/static/sing.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="/static/sing.css">
 </head>
 <body>
-    <!-- 헤더 시작 -->
-    <div class="header">
-        <img src="/static/images/logo.jpg" alt="로고" class="logo-image"> <!-- 로고 이미지 -->
-        <h1>SoulSync</h1> <!-- 사이트 이름 -->
-    </div>
-    <!-- 헤더 끝 -->
-
-    <!-- 사이드바 시작 -->
-    <div class="sidebar">
-        <a href="home.html"><img src="/static/images/home.png" alt="Home"><br>홈</a> <!-- 홈으로 이동 -->
-        <a href="box.html"><img src="/static/images/archive.png" alt="Archive"><br>보관함</a> <!-- 보관함으로 이동 -->
-    </div>
-    <!-- 사이드바 끝 -->
-
-    <!-- 메인 콘텐츠 시작 -->
-    <div class="content">
-        <div class="song-info">
-            <!-- 빈 네모칸 (AI로 노래 정보 표시 예정) -->
-            <div class="song-thumbnail"></div>
-            <!-- 노래 정보 (제목, 가수) -->
-            <div class="song-details">
-                <p><!-- 노래제목 --></p>
-                <p><!-- 가수 --></p>
-                <button class="play-button">▶</button> <!-- 재생 버튼 -->
-            </div>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="/static/images/logo.jpg" alt="로고" class="logo-image">
+            </a>
+            <span class="logo-text">SoulSync</span>
         </div>
-        <div class="lyrics-box">
-            <!-- 가사 표시 (AI로 가져올 예정) -->
-            <p>가사</p>
+    </header>
+
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+        <a href="home.html" class="sidebar-item">
+            <img src="/static/images/home.png" alt="Home Icon" class="sidebar-icon">
+            <span class="sidebar-text">홈</span>
+        </a>
+        <a href="box.html" class="sidebar-item">
+            <img src="/static/images/archive.png" alt="Archive Icon" class="sidebar-icon">
+            <span class="sidebar-text">보관함</span>
+        </a>
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="content">
+        <div class="album-and-lyrics">
+            <!-- 작은 네모칸 (앨범 표지) -->
+            <div class="album-cover"></div>
+            
+            <!-- 조금 큰 네모칸 (노래 가사) -->
+            <div class="lyrics-box"></div>
         </div>
-    </div>
-    <!-- 메인 콘텐츠 끝 -->
+
+        <!-- 노래 제목과 가수 -->
+        <!--
+        <div class="song-details">
+            <p>노래 제목</p>
+            <p>가수</p>
+        </div>
+        -->
+    </main>
 </body>
 </html>
