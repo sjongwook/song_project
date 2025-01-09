@@ -17,7 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 팝업 외부 클릭 시 닫기
-    popupOverlay.addEventListener('click', () => {
-        loginPopup.style.display = 'none'; // 팝업 숨김
-    });
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', () => {
+            loginPopup.style.display = 'none'; // 팝업 숨김
+        });
+    }
+
+    // 로그인 버튼 클릭 시 홈으로 이동
+    const submitButton = document.querySelector('.login-button');
+    if (submitButton) {
+        submitButton.addEventListener('click', (event) => {
+            event.preventDefault(); // 폼 제출 방지
+            window.location.href = '/home'; // home.html로 이동
+        });
+    }
 });
