@@ -4,44 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - SoulSync</title>
-    <link rel="stylesheet" href="/static/home.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="/static/home.css">
 </head>
 <body>
-    <!-- 헤더 시작 -->
-    <div class="header">
-        <img src="/static/images/logo.jpg" alt="로고" class="logo-image"> <!-- 로고 이미지 -->
-        <h1>SoulSync</h1> <!-- 사이트 이름 -->
-    </div>
-    <!-- 헤더 끝 -->
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="/static/images/logo.jpg" alt="로고" class="logo-image">
+            </a>
+            <span class="logo-text">SoulSync</span>
+        </div>
+    </header>
 
-    <!-- 사이드바 시작 -->
-    <div class="sidebar">
-        <a href="home.html"><img src="/static/images/home.png" alt="Home"><br>홈</a> <!-- 홈으로 이동 -->
-        <a href="box.html"><img src="/static/images/archive.png" alt="Archive"><br>보관함</a> <!-- 보관함으로 이동 -->
-    </div>
-    <!-- 사이드바 끝 -->
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+        <a href="/home" class="sidebar-item">
+            <img src="/static/images/home.png" alt="Home Icon" class="sidebar-icon">
+            <span class="sidebar-text">홈</span>
+        </a>
+        <a href="/box" class="sidebar-item">
+            <img src="/static/images/archive.png" alt="Archive Icon" class="sidebar-icon">
+            <span class="sidebar-text">보관함</span>
+        </a>
+    </aside>
 
-    <!-- 메인 콘텐츠 시작 -->
-    <div class="content">
-        <!-- 네모난 이미지 그리드 (현재 주석처리됨) -->
-        <!-- <div class="grid">
+    <!-- 메인 콘텐츠 -->
+    <main class="content">
+        <!-- 네모난 4개의 박스 (AI 데이터 추가 예정) -->
+        <!--
+        <div class="grid">
             <div class="grid-item"></div>
             <div class="grid-item"></div>
             <div class="grid-item"></div>
             <div class="grid-item"></div>
-        </div> -->
-        <h2>오늘의 기분은 어떠신가요?</h2> <!-- 메인 메시지 -->
-        <p>기분으로 노래를 추천받으세요</p> <!-- 부가 설명 -->
-    </div>
-    <!-- 메인 콘텐츠 끝 -->
+        </div>
+        -->
+    </main>
 
-    <!-- 하단 입력창 시작 -->
-    <div class="footer">
-        <form action="recommend.html" method="get"> <!-- 입력된 기분으로 추천 페이지 이동 -->
-            <input type="text" placeholder="오늘의 기분을 입력하세요" name="mood"> <!-- 기분 입력 필드 -->
-            <button type="submit">추천받기</button> <!-- 제출 버튼 -->
-        </form>
-    </div>
-    <!-- 하단 입력창 끝 -->
+    <!-- 하단 입력 영역 -->
+    <footer class="footer">
+        <h1>오늘은 어떤일이 있었나요?</h1>
+        <p>당신의 일상을 들려주세요</p>
+        <div class="input-container">
+            <input type="text" placeholder="기분을 입력하세요">
+        </div>
+    </footer>
 </body>
 </html>
