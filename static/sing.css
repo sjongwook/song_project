@@ -1,0 +1,93 @@
+/* 공통 스타일 */
+body {
+    background-color: #212121; /* 배경색 */
+    font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+    color: #FAFAFA; /* 글씨색 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 스타일 */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.header img {
+    height: 40px; /* 로고 이미지 높이 */
+    margin-right: 10px; /* 로고와 텍스트 간격 */
+}
+
+.header h1 {
+    font-size: 24px; /* 텍스트 크기 */
+    margin: 0;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    width: 80px; /* 사이드바 너비 */
+    background-color: #1c1c1c; /* 사이드바 배경색 */
+    height: 100vh; /* 화면 높이 전체 사용 */
+    position: fixed; /* 고정 위치 */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    padding-top: 20px; /* 위쪽 여백 */
+}
+
+.sidebar a {
+    color: #FAFAFA; /* 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-bottom: 20px; /* 아이템 간격 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 메인 콘텐츠 스타일 */
+.content {
+    margin-left: 100px; /* 사이드바와의 간격 */
+    padding: 20px;
+    display: flex;
+    gap: 20px; /* 요소 간 간격 */
+}
+
+/* 노래 썸네일 스타일 */
+.song-thumbnail {
+    width: 200px;
+    height: 200px;
+    background-color: #9E9E9E; /* 썸네일 배경색 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
+
+/* 노래 정보 스타일 */
+.song-details {
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 재생 버튼 스타일 */
+.play-button {
+    background-color: #1c1c1c; /* 버튼 배경색 */
+    border: none; /* 테두리 제거 */
+    color: #FAFAFA; /* 버튼 텍스트 색상 */
+    font-size: 20px; /* 텍스트 크기 */
+    padding: 10px; /* 버튼 안쪽 여백 */
+    border-radius: 50%; /* 버튼을 원형으로 */
+    cursor: pointer; /* 마우스 커서 변경 */
+}
+
+.play-button:hover {
+    background-color: #333; /* 버튼 호버 색상 */
+}
+
+/* 가사 박스 스타일 */
+.lyrics-box {
+    flex: 1; /* 남은 공간 모두 사용 */
+    background-color: #9E9E9E; /* 가사 박스 배경색 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    padding: 20px; /* 안쪽 여백 */
+    height: 200px; /* 고정 높이 */
+}
