@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #212121;
+    color: #fafafa;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #212121; /* 헤더 배경색 */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10; /* 헤더를 항상 위로 표시 */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: #FAFAFA; /* 로고 텍스트 색상 */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px; /* 헤더 아래로 위치 */
+    left: 0;
+    width: 200px;
+    background-color: #1c1c1c; /* 사이드바 배경색 */
+    height: calc(100% - 60px); /* 헤더를 제외한 높이 */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    color: #FAFAFA; /* 텍스트 색상 */
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+    background-color: #333; /* 호버 시 배경색 */
+    width: 158px;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* 아이콘과 텍스트 간격 */
+}
+
+.sidebar-text {
+    font-size: 16px; /* 사이드바 텍스트 크기 */
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 70px;
+}
+
+.mixes {
+    display: flex;
+    gap: 30px;
+}
+
+.mix {
+    text-align: center;
+}
+
+.album {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    margin: 5px;
+}
