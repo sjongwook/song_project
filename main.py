@@ -2,6 +2,7 @@ from fastapi import FastAPI, Form, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
@@ -72,3 +73,23 @@ def reset_password(username: str = Form(...), new_password: str = Form(...)):
     # 비밀번호 업데이트
     users_db[username] = new_password
     return {"message": "비밀번호가 성공적으로 변경되었습니다."}
+
+# templates 디렉토리를 설정합니다.
+templates = Jinja2Templates(directory="templates")
+
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+@app.get("/home", response_class=HTMLResponse)
+async def read_home(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000)
+
+# 보관함 페이지 라우트
+@app.get("/box")
+def read_box(request: Request):
+    return templates.TemplateResponse("box.html", {"request": request})
