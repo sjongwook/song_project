@@ -93,3 +93,8 @@ if __name__ == "__main__":
 @app.get("/box")
 def read_box(request: Request):
     return templates.TemplateResponse("box.html", {"request": request})
+
+# main_home_pli 페이지 라우트 추가
+@app.get("/main_home_pli", response_class=HTMLResponse)
+async def read_main_home_pli(request: Request):
+    return templates.TemplateResponse("main_home_pli.html", {"request": request})
