@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupOverlay = document.querySelector('.popup-overlay'); // 팝업 배경
 
     // 팝업 열기
-    loginButton.addEventListener('click', () => {
-        loginPopup.style.display = 'flex'; // 팝업 표시
-    });
+    if (loginButton) {
+        loginButton.addEventListener('click', () => {
+            loginPopup.style.display = 'flex'; // 팝업 표시
+        });
+    }
 
     // 팝업 닫기 버튼
     if (closePopup) {
@@ -24,11 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 로그인 버튼 클릭 시 홈으로 이동
-    const submitButton = document.querySelector('.login-button');
-    if (submitButton) {
-        submitButton.addEventListener('click', (event) => {
+    const loginSubmitButton = document.querySelector('.login-button'); // 로그인 제출 버튼
+    if (loginSubmitButton) {
+        loginSubmitButton.addEventListener('click', (event) => {
             event.preventDefault(); // 폼 제출 방지
             window.location.href = '/home'; // home.html로 이동
+        });
+    }
+
+    // 프롬프트 입력 후 제출 버튼 클릭 시 고정된 URL로 이동
+    const promptSubmitButton = document.getElementById('submit-button'); // 프롬프트 제출 버튼
+    const promptInput = document.getElementById('prompt-input');         // 입력 필드
+
+    if (promptSubmitButton && promptInput) {
+        promptSubmitButton.addEventListener('click', (event) => {
+            event.preventDefault(); // 기본 동작 방지 (폼 제출 방지)
+            window.location.href = 'http://127.0.0.1:8000/main_home_pli';
         });
     }
 });
