@@ -1,0 +1,187 @@
+/* 공통 스타일 */
+body {
+    background-color: #212121; /* 배경색 */
+    font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+    color: #D9D9D9; /* 글씨색 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 스타일 */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1c1c1c; /* 헤더 배경색 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.header img {
+    height: 40px; /* 로고 이미지 높이 */
+    margin-right: 10px; /* 로고와 텍스트 간격 */
+}
+
+.header h1 {
+    font-size: 24px; /* 헤더 글씨 크기 */
+    margin: 0;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    width: 80px; /* 사이드바 너비 */
+    background-color: #1c1c1c; /* 사이드바 배경색 */
+    height: 100vh; /* 화면 전체 높이 */
+    position: fixed; /* 고정 위치 */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;
+    padding-top: 20px; /* 위쪽 여백 */
+}
+
+.sidebar a {
+    color: #D9D9D9; /* 링크 글씨 색상 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    margin-bottom: 20px; /* 아이템 간격 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 메인 콘텐츠 스타일 */
+.content {
+    margin-left: 100px; /* 사이드바와의 간격 */
+    padding: 20px;
+}
+
+/* 그리드 스타일 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4열 그리드 */
+    gap: 20px; /* 요소 간격 */
+    margin-top: 20px; /* 위쪽 여백 */
+}
+
+.grid-item {
+    width: 100px;
+    height: 100px;
+    background-color: #9E9E9E; /* 그리드 아이템 배경색 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
+
+/* 하단 입력창 스타일 */
+.footer {
+    position: fixed; /* 고정 위치 */
+    bottom: 0; /* 화면 하단 고정 */
+    width: 100%; /* 전체 너비 */
+    padding: 10px 20px;
+    background-color: #1c1c1c; /* 배경색 */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.footer form {
+    display: flex;
+    align-items: center;
+}
+
+
+.footer button {
+    padding: 10px 20px; /* 버튼 여백 */
+    margin-left: 10px; /* 버튼과 입력창 간격 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    background-color: #212121; /* 버튼 배경색 */
+    color: #D9D9D9; /* 버튼 텍스트 색상 */
+    cursor: pointer; /* 커서 변경 */
+}
+
+.footer button:hover {
+    background-color: #333; /* 버튼 호버 효과 */
+}
+
+.main-content {
+    margin-left: 220px; /* 사이드바 너비 */
+    margin-top: 60px; /* 헤더 높이 */
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    height: calc(100vh - 60px); /* 헤더 높이 제외 */
+    display: flex;
+    gap: 20px; /* 좌우 간격 */
+}
+
+.playlist-section {
+    flex: 1;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #666;
+    border-radius: 5px;
+    color: white;
+}
+
+.playlist-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.playlist-item .playlist-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.songs-section {
+    flex: 2;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #666;
+    border-radius: 5px;
+    color: white;
+}
+
+.song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.song-title {
+    font-weight: bold;
+}
+
+.song-artist {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+.song-options {
+    margin-left: auto;
+    cursor: pointer;
+}
