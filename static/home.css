@@ -1,0 +1,118 @@
+/* 전체 레이아웃 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #212121; /* 배경색 */
+    color: #FAFAFA; /* 기본 글씨 색상 */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* 헤더 스타일 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #212121; /* 헤더 배경색 */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10; /* 헤더를 항상 위로 표시 */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: #FAFAFA; /* 로고 텍스트 색상 */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    position: fixed;
+    top: 60px; /* 헤더 아래로 위치 */
+    left: 0;
+    width: 200px;
+    background-color: #212121; /* 사이드바 배경색 */
+    height: calc(100% - 60px); /* 헤더를 제외한 높이 */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    color: #FAFAFA; /* 텍스트 색상 */
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, width 0.3s; /* 호버 시 크기 변경 애니메이션 추가 */
+}
+
+.sidebar-item:hover {
+    background-color: #333; /* 호버 시 배경색 */
+    width: 158px; /* 호버 시 너비를 158px로 줄임 */
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* 아이콘과 텍스트 간격 */
+}
+
+.sidebar-text {
+    font-size: 16px; /* 사이드바 텍스트 크기 */
+}
+
+/* 메인 콘텐츠 스타일 */
+.content {
+    flex: 1;
+    margin-left: 200px; /* 사이드바와의 간격 */
+    padding: 20px;
+}
+
+/* 하단 입력 영역 스타일 */
+.footer {
+    background-color: #212121; /* 하단 영역 배경색 */
+    padding: 20px;
+    text-align: left; /* 왼쪽 정렬 */
+    margin-top: auto;
+    padding-left: 200px; /* 사이드바에 맞춰 정렬 */
+}
+
+.footer h1 {
+    font-size: 36px; /* 글씨 크기 키움 */
+    margin-bottom: -30px;
+}
+
+.footer p {
+    font-size: 27px; /* 설명 글씨 크기 키움 */
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: calc(100% - 220px); /* 입력창 너비: 사이드바와의 간격 포함 */
+    padding: 20px; /* 입력창 높이와 내부 여백 증가 */
+    border: none;
+    border-radius: 25px; /* 입력창 모서리를 더 둥글게 */
+    background-color: #FAFAFA; /* 입력창 배경색 */
+    color: #212121; /* 입력창 글씨색 */
+    font-size: 16px;
+    height: 30px; /* 입력창 높이를 늘림 */
+}
