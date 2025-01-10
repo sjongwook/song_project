@@ -25,25 +25,25 @@
     <main class="content">
         <div class="box-container">
             <!-- 첫 번째 박스 -->
-            <a href="recommend.html" class="box">
+            <a href="#" class="box" id="happy_box">
                 <img src="/static/images/happy.png" alt="행복이 이미지" class="box-image">
                 <p class="box-text">행복이</p>
             </a>
 
             <!-- 두 번째 박스 -->
-            <a href="recommend.html" class="box">
+            <a href="#" class="box" id="soso_box">
                 <img src="/static/images/soso.png" alt="보통이 이미지" class="box-image">
                 <p class="box-text">보통이</p>
             </a>
 
             <!-- 세 번째 박스 -->
-            <a href="recommend.html" class="box">
+            <a href="#" class="box" id="angry_box">
                 <img src="/static/images/angry.png" alt="화남이 이미지" class="box-image">
                 <p class="box-text">화남이</p>
             </a>
 
             <!-- 네 번째 박스 -->
-            <a href="recommend.html" class="box">
+            <a href="#" class="box" id="sad_box">
                 <img src="/static/images/sad.png" alt="슬픔이 이미지" class="box-image">
                 <p class="box-text">슬픔이</p>
             </a>
@@ -55,7 +55,7 @@
         <h1>오늘은 어떤일이 있었나요?</h1>
         <p>당신의 일상을 들려주세요</p>
         <div class="input-container">
-            <input type="text" placeholder="기분을 입력하세요">
+            <input type="text" id="prompt-input" placeholder="기분을 입력하세요">
         </div>
     </footer>
 
@@ -68,7 +68,6 @@
                 <input type="text" id="username" name="username" placeholder="아이디를 입력하세요">
                 <label for="password">비밀번호</label>
                 <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요">
-                <a href="forgot_password" class="forgot-password">비밀번호를 잊으셨나요?</a>
                 <button type="button" id="login-button" class="login-button">로그인</button>
             </form>
             <p class="signup-text">계정이 없으신가요? <a href="signup" class="signup-link">회원가입</a></p>
