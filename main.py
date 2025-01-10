@@ -98,3 +98,11 @@ def read_box(request: Request):
 @app.get("/main_home_pli", response_class=HTMLResponse)
 async def read_main_home_pli(request: Request):
     return templates.TemplateResponse("main_home_pli.html", {"request": request})
+
+@app.get("/list", response_class=HTMLResponse)
+async def read_home(request: Request):
+    return templates.TemplateResponse("list.html", {"request": request})
+
+@app.get("/sing", response_class=HTMLResponse)
+async def read_home(request: Request):
+    return templates.TemplateResponse("sing.html", {"request": request})
