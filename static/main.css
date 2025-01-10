@@ -188,7 +188,7 @@ body {
 }
 
 .popup-content h2 {
-    color: white;
+    color: #FAFAFA;
     margin-bottom: 40px;
     font-size: 22px;
     font-weight: bold;
@@ -220,4 +220,20 @@ body {
 
 .popup-content form button:hover {
     background-color: #444;
+}
+
+.signup-text {
+    text-align: center;
+}
+
+.signup-link {
+    color: #fafafa; /* 기본 텍스트 색상 */
+    font-size: 16px;
+    font-weight: bold; /* 굵은 글씨 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* 부드러운 색상 및 그림자 변화 */
+}
+
+.signup-link:hover {
+    color: #fafafa; /* 호버 시 텍스트 색상 변경 */
 }
